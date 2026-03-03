@@ -28,3 +28,6 @@ jobs:
       - uses: codecov/codecov-action@v4
         with:
           fail_ci_if_error: false
+
+      - name: SkillGuard Security Scan
+        run: python3 scripts/skillguard-scanner.py --skills-dir . --skill skill --json-out /dev/null
